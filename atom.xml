@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2022-02-19T08:28:57.150Z</updated>
+  <updated>2022-02-19T09:01:25.869Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,15 +17,24 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>second</title>
+    <title>咖啡</title>
     <link href="http://yoursite.com/2022/02/19/second/"/>
     <id>http://yoursite.com/2022/02/19/second/</id>
     <published>2022-02-19T08:28:57.000Z</published>
-    <updated>2022-02-19T08:28:57.150Z</updated>
+    <updated>2022-02-19T09:01:25.869Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="咖啡的小知识"><a href="#咖啡的小知识" class="headerlink" title="咖啡的小知识"></a>咖啡的小知识</h1><p>原材料：咖啡从树上结果，生的状态一般叫绿咖啡Green coffee<br>咖啡两大类：Arabica阿拉比卡和Robusta罗布斯塔。前者比后者更优质<br>咖啡因的含量和风味不同。一般Robusta豆的咖啡因比Arabica豆要高。<br>Robusta主要产地是东半球越南、非洲。Arabica糖和脂多主要产地牙买加、夏威夷。品牌：蓝山、曼特宁、科纳。<br>咖啡树热带植物<br>煮的咖啡brewed coffee<br>light/blonde轻度烘焙；medium中度烘焙；dark roast重度烘焙<br>酸涩感：轻度&gt;中度&gt;重度<br>冲煮专业名词都为萃取<br>浸泡式brewed<br>意式浓缩espresso【可以搭配奶、巧克力酱】拿铁、摩卡、卡布奇诺</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;咖啡的小知识&quot;&gt;&lt;a href=&quot;#咖啡的小知识&quot; class=&quot;headerlink&quot; title=&quot;咖啡的小知识&quot;&gt;&lt;/a&gt;咖啡的小知识&lt;/h1&gt;&lt;p&gt;原材料：咖啡从树上结果，生的状态一般叫绿咖啡Green coffee&lt;br&gt;咖啡两大类：Arabica阿拉比</summary>
+      
     
     
     
     
+    <category term="小知识" scheme="http://yoursite.com/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/"/>
     
   </entry>
   
