@@ -3,11 +3,11 @@
   <title>ZXhome</title>
   
   
-  <link href="https://github.com/ZXHubs/atom.xml" rel="self"/>
+  <link href="http://yoursite.com/atom.xml" rel="self"/>
   
-  <link href="https://github.com/ZXHubs/"/>
-  <updated>2022-02-19T07:17:21.625Z</updated>
-  <id>https://github.com/ZXHubs/</id>
+  <link href="http://yoursite.com/"/>
+  <updated>2022-02-19T08:28:57.150Z</updated>
+  <id>http://yoursite.com/</id>
   
   <author>
     <name>ZhangX</name>
@@ -17,24 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>第二篇</title>
-    <link href="https://github.com/ZXHubs/2022/02/19/%E7%AC%AC%E4%BA%8C%E7%AF%87/"/>
-    <id>https://github.com/ZXHubs/2022/02/19/%E7%AC%AC%E4%BA%8C%E7%AF%87/</id>
-    <published>2022-02-19T07:17:21.000Z</published>
-    <updated>2022-02-19T07:17:21.625Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>测试第一遍文章</title>
-    <link href="https://github.com/ZXHubs/2022/02/19/%E6%B5%8B%E8%AF%95%E7%AC%AC%E4%B8%80%E9%81%8D%E6%96%87%E7%AB%A0/"/>
-    <id>https://github.com/ZXHubs/2022/02/19/%E6%B5%8B%E8%AF%95%E7%AC%AC%E4%B8%80%E9%81%8D%E6%96%87%E7%AB%A0/</id>
-    <published>2022-02-19T06:28:55.000Z</published>
-    <updated>2022-02-19T06:28:55.384Z</updated>
+    <title>second</title>
+    <link href="http://yoursite.com/2022/02/19/second/"/>
+    <id>http://yoursite.com/2022/02/19/second/</id>
+    <published>2022-02-19T08:28:57.000Z</published>
+    <updated>2022-02-19T08:28:57.150Z</updated>
     
     
     
@@ -44,8 +31,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://github.com/ZXHubs/2022/02/19/hello-world/"/>
-    <id>https://github.com/ZXHubs/2022/02/19/hello-world/</id>
+    <link href="http://yoursite.com/2022/02/19/hello-world/"/>
+    <id>http://yoursite.com/2022/02/19/hello-world/</id>
     <published>2022-02-19T03:02:53.045Z</published>
     <updated>2022-02-19T06:14:07.500Z</updated>
     
