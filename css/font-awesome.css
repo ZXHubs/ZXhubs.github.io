@@ -195,12 +195,12 @@
 .fa-heart:before {
   content: "\f004";
 }
-.fa-star:before {
-  content: "\f005";
-}
-.fa-star-o:before {
-  content: "\f006";
-}
+/*.fa-star:before {*/
+/*  content: "\f005";*/
+/*}*/
+/*.fa-star-o:before {*/
+/*  content: "\f006";*/
+/*}*/
 .fa-user:before {
   content: "\f007";
 }
