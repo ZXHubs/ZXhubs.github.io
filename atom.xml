@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2022-02-21T05:02:14.437Z</updated>
+  <updated>2022-02-22T08:57:16.158Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何运行 GitHub 上的 iOS app</title>
+    <link href="http://yoursite.com/2022/02/22/%E5%A6%82%E4%BD%95%E8%B7%91GitHub%E4%B8%8A%E7%9A%84iOSapp/"/>
+    <id>http://yoursite.com/2022/02/22/%E5%A6%82%E4%BD%95%E8%B7%91GitHub%E4%B8%8A%E7%9A%84iOSapp/</id>
+    <published>2022-02-22T08:49:26.000Z</published>
+    <updated>2022-02-22T08:57:16.158Z</updated>
+    
+    <content type="html"><![CDATA[<p>步骤一、clone 源码之后，在你的 Mac 上安装 CocoaPods。</p><p>步骤二、打开 <code>终端</code>，切换到工程文件的目录下。比如你的工程文件下载到了 Mac 的桌面上，在 <code>终端</code> app 中输入 cd 切换到文件目录下。</p><p>步骤三、输入 <code>pod install</code> 安装工程所依赖的库。显示如下即安装成功。<br>步骤四、在 Xcode 中打开运行本工程文件，请注意⚠️打开的是 <code>.xcworkspace</code> 并非是 <code>.xcodeproj</code>，请务必注意后缀。</p><blockquote><p> 在上述指南中可能会遇到的一些疑惑。</p></blockquote><ul><li>Q：CocoaPods 是什么？<br>A：CocoaPods 是 macOS 和 iOS 平台非常流行的包管理工具，用来帮助我们管理第三方依赖库的工具。通过调用第三方库，可以用于拓展软件的功能。</li></ul><hr><ul><li>Q：为什么需要 CocoaPods？<br>A：在实际开发过程中避免不了去使用第三方的库，所以会使用到 CocoaPods。pod 是由 ruby 语言编写的，是记录引用库的名称，执行 <code>pod install</code> 即在把远程仓库下载至本地。</li></ul><hr><ul><li>Q：在使用 <code>pod install</code> 命令时速度过慢？<br>A：解决方案之一可以采取换源的方式。输入 <code>gem sources</code> 能够查看当前源。输入 <code>gem sources --add https://gems.ruby-china.com/</code> 删除之前的源 <code>gem sources -r https://rubygems.org/</code></li></ul><hr><ul><li>Q：在使用 <code>Podfile</code> 文件是什么？<br>A：用于描述一个或多个 <code>Xcode Project</code> 中各个 <code>Targets</code> 之间的依赖关系</li></ul><hr><ul><li>Q：在使用 <code>Lockfile</code> 文件是什么？<br>A：用于记录最后一次 CocoaPods 所安装的 Pod 依赖库版本的信息快照。生成的 Podfile.lock。在 pod install 过程，Podfile 会结合它来确认最终所安装的 Pod 版本。</li></ul><hr><ul><li>Q：xcworkspace 和 xcodeproj 的区别？<br>A：xcodeproj bundle 内包含 project.workspace。而当我们通过 pod install 命令添加 Pod 依赖后，Xcode 工程目录下会多出 .workspace，它是 Xcodeproj 替我们生成的，用于管理当前的 .project 与 Pods.pbxproj。</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;步骤一、clone 源码之后，在你的 Mac 上安装 CocoaPods。&lt;/p&gt;
+&lt;p&gt;步骤二、打开 &lt;code&gt;终端&lt;/code&gt;，切换到工程文件的目录下。比如你的工程文件下载到了 Mac 的桌面上，在 &lt;code&gt;终端&lt;/code&gt; app 中输入 cd 切换到文件目</summary>
+      
+    
+    
+    
+    
+    <category term="技术" scheme="http://yoursite.com/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>搭建博客</title>

@@ -1,0 +1,32 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="ZhangX"><title>如何运行 GitHub 上的 iOS app · ZXhome</title><meta name="description" content="步骤一、clone 源码之后，在你的 Mac 上安装 CocoaPods。
+步骤二、打开 终端，切换到工程文件的目录下。比如你的工程文件下载到了 Mac 的桌面上，在 终端 app 中输入 cd 切换到文件目录下。
+步骤三、输入 pod install 安装工程所依赖的库。显示如下即安装成功。步骤四"><meta name="keywords" content="Blog,博客,Hexo"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="shortcut icon" type="image/x-icon" href="/images/favicon.webp"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="/css/insight.css"><link rel="stylesheet" href="/css/search.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><script src="/js/jquery.js"></script><meta name="generator" content="Hexo 5.4.1"></head><body><div class="page-top animated fadeInDown"><div class="nav"><li> <a href="/">首页</a></li><li> <a href="/archives">归档</a></li><li> <a href="/tags">标签</a></li><li> <a href="/about">关于</a></li></div><div class="information"><div class="nav_right_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li><li><a class="fa fa-search" onclick="openWindow();"></a></li></div><div class="avatar"><img src="/images/logo.webp"></div></div></div><div class="sidebar animated fadeInDown"><div class="sidebar-top"><div class="logo-title"><div class="title"><img src="/images/logo@2x.webp" style="width:200px;" alt="favicon"><h3 title=""><a href="/">ZXhome</a></h3><div class="description"><p>ZhangX 的博客</p></div></div><ul class="social-links"><li><a target="_blank" rel="noopener" href="https://github.com/ZXHubs"><i class="fa fa-github"></i></a></li><li><a href="mailto:zxjerry@163.com"><i class="fa fa-envelope"></i></a></li></ul></div></div><div class="footer"><div class="p"> <span> Copyright © 2022 </span><i class="fa fa-star"></i><span> ZhangX</span></div><div class="beian"></div></div></div><div class="main"><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>如何运行 GitHub 上的 iOS app</a></h3></div><div class="post-content"><p><p>步骤一、clone 源码之后，在你的 Mac 上安装 CocoaPods。</p>
+<p>步骤二、打开 <code>终端</code>，切换到工程文件的目录下。比如你的工程文件下载到了 Mac 的桌面上，在 <code>终端</code> app 中输入 cd 切换到文件目录下。</p>
+<p>步骤三、输入 <code>pod install</code> 安装工程所依赖的库。显示如下即安装成功。<br>步骤四、在 Xcode 中打开运行本工程文件，请注意⚠️打开的是 <code>.xcworkspace</code> 并非是 <code>.xcodeproj</code>，请务必注意后缀。</p>
+<blockquote>
+<p> 在上述指南中可能会遇到的一些疑惑。</p>
+</blockquote>
+<ul>
+<li>Q：CocoaPods 是什么？<br>A：CocoaPods 是 macOS 和 iOS 平台非常流行的包管理工具，用来帮助我们管理第三方依赖库的工具。通过调用第三方库，可以用于拓展软件的功能。</li>
+</ul>
+<hr>
+<ul>
+<li>Q：为什么需要 CocoaPods？<br>A：在实际开发过程中避免不了去使用第三方的库，所以会使用到 CocoaPods。pod 是由 ruby 语言编写的，是记录引用库的名称，执行 <code>pod install</code> 即在把远程仓库下载至本地。</li>
+</ul>
+<hr>
+<ul>
+<li>Q：在使用 <code>pod install</code> 命令时速度过慢？<br>A：解决方案之一可以采取换源的方式。输入 <code>gem sources</code> 能够查看当前源。输入 <code>gem sources --add https://gems.ruby-china.com/</code> 删除之前的源 <code>gem sources -r https://rubygems.org/</code></li>
+</ul>
+<hr>
+<ul>
+<li>Q：在使用 <code>Podfile</code> 文件是什么？<br>A：用于描述一个或多个 <code>Xcode Project</code> 中各个 <code>Targets</code> 之间的依赖关系</li>
+</ul>
+<hr>
+<ul>
+<li>Q：在使用 <code>Lockfile</code> 文件是什么？<br>A：用于记录最后一次 CocoaPods 所安装的 Pod 依赖库版本的信息快照。生成的 Podfile.lock。在 pod install 过程，Podfile 会结合它来确认最终所安装的 Pod 版本。</li>
+</ul>
+<hr>
+<ul>
+<li>Q：xcworkspace 和 xcodeproj 的区别？<br>A：xcodeproj bundle 内包含 project.workspace。而当我们通过 pod install 命令添加 Pod 依赖后，Xcode 工程目录下会多出 .workspace，它是 Xcodeproj 替我们生成的，用于管理当前的 .project 与 Pods.pbxproj。</li>
+</ul>
+</p><div class="tip">保留所有权利<br>作者: ZhangX</div></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2022-02-22</span><i class="fa fa-tag"></i><a class="tag" href="/tags/技术/" title="技术">技术 </a><span class="leancloud_visitors"></span><span>大约544个字, 1分钟48秒读完</span></div></div></div></div><div class="pagination"><ul class="clearfix"><li class="next pagbuttons"><a class="btn" role="navigation" href="/2022/02/20/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" title="搭建博客">下一篇</a></li></ul></div><script src="/js/visitors.js"></script></div></div></div></div><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/add-bookmark.js"></script><script>(function(window){var INSIGHT_CONFIG={TRANSLATION:{POSTS:"文章",PAGES:"页面",CATEGORIES:"分类",TAGS:"标签",UNTITLED:"(无标题)",},CONTENT_URL:"/content.json",};window.INSIGHT_CONFIG=INSIGHT_CONFIG})(window);</script><script src="/js/insight.js" defer></script><div class="searchbox ins-search"><div class="searchbox-container ins-search-container"><div class="searchbox-input-wrapper"><input class="searchbox-input ins-search-input" type="text" placeholder="想要查找什么..."><span class="searchbox-close"><a class="fa fa-times-circle" onclick="closeWindow();"></a></span></div><div class="searchbox-result-wrapper ins-section-wrapper"><div class="ins-section-container"><p>Seraching...</p></div></div></div></div></body></html>
