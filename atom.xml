@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2022-02-22T09:00:09.789Z</updated>
+  <updated>2022-02-23T07:05:51.650Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,51 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>iOS 面试题</title>
+    <link href="http://yoursite.com/2022/02/23/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <id>http://yoursite.com/2022/02/23/%E9%9D%A2%E8%AF%95%E9%A2%98/</id>
+    <published>2022-02-23T06:33:03.000Z</published>
+    <updated>2022-02-23T07:05:51.650Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="TCP-为什么要三次握手，四次挥手？"><a href="#TCP-为什么要三次握手，四次挥手？" class="headerlink" title="TCP 为什么要三次握手，四次挥手？"></a>TCP 为什么要三次握手，四次挥手？</h1><p>为了防止已失效的连接请求报文段突然又传送到了服务端，因而产生错误，假设这是一个早已失效的报文段。</p><p>但是服务器使用到此失效的连接请求报文段后，就误认为客户端再次发出的一个新的连接请求。于是就向客户端发出确认报文段，同意建立连接。</p><p>假设不采用三次握手，那么只要服务器发出确认，新的连接就建立了。</p><p>由于客户端没有发出建立连接的请求，因此不会理睬服务器的确认，也不会向服务器发送数据，但是服务器却以为新的运输连接已经建立，并一直等待客户端发来数据，这样服务器的很多资源就会被浪费掉。</p><span id="more"></span><p>四次挥手主要是：因为 TCP 是全双工通信，在接收到客户端的关闭请求时，还可能在向客户端发送数据，因此不能回应关闭链接的请求时，同时发送关闭链接的请求。</p><h1 id="HTTP-和-HTTPS-的区别"><a href="#HTTP-和-HTTPS-的区别" class="headerlink" title="HTTP 和 HTTPS 的区别"></a>HTTP 和 HTTPS 的区别</h1><p>HTTP 是明文传输，数据都是为加密的，安全性较差。<br>HTTPS（SSL+HTTP）数据传输过程是加密的，安全性较高。</p><p>使用 HTTPS 协议需要到 CA（Certificate Authority，数字证书认证机构）申请证书，一般免费证书少，因而需要一定费用。</p><p>HTTP 页面响应速度比 HTTPS 快，主要是因为 HTTP 使用 TCP 三次握手建立连接，客户端和服务器需要交换 3 个包，而 HTTPS 除了 TCP 的三个包，还要加上 SSL 握手需要的 9 个包，一共是 12 个包。</p><p>HTTP 和 HTTPS 使用的是完全不同的连接方式，用的端口也不一样，前者是 80，后者是 443.</p><p>HTTPS 就是建构在 SSL/TLS 之上的 HTTP 协议，所以，HTTPS 比 HTTP 更加消耗服务器资源。</p><h1 id="成员变量和属性的区别以及不同关键字的作用"><a href="#成员变量和属性的区别以及不同关键字的作用" class="headerlink" title="成员变量和属性的区别以及不同关键字的作用"></a>成员变量和属性的区别以及不同关键字的作用</h1><p>成员变量：默认修饰符是 <code>protected</code>，不会自动生成 <code>set</code> 和 <code>get</code> 方法，需要手动实现，不能使用点语法调用，因为没有 <code>set</code> 和<code>get</code> 方法，只能使用<code>-&gt;</code>。</p><p>属性：默认会生成带下划线的成员变量和 <code>setter</code>/<code>getter</code> 方法，可以使用点语法调用，实际上调用的是 <code>set</code> 和 <code>get</code> 方法。<br>⚠️注意：分类中添加的属性是不会自动生成 <code>setter</code>/<code>getter</code> 方法，必须手动添加。</p><p>实例变量：class 类进行实例化出来的对象为实例对象。</p><p>关键字作用：<br><code>public</code> 声明公共实例变量，在任何地方都能直接访问对象的成员变量。<br><code>private</code> 声明私有实例变量，只能在当前类对象方法中直接访问，子类要访问需要调用父类的 <code>set</code>/<code>get</code>方法。 private(set)。<br><code>protected</code> 可以在当前类及其子类对象方法中直接访问（系统默认）。<br><code>package</code> 在同一个包下就可以直接访问，诸如同一个框架下。<br><code>property</code> 声明属性</p>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;TCP-为什么要三次握手，四次挥手？&quot;&gt;&lt;a href=&quot;#TCP-为什么要三次握手，四次挥手？&quot; class=&quot;headerlink&quot; title=&quot;TCP 为什么要三次握手，四次挥手？&quot;&gt;&lt;/a&gt;TCP 为什么要三次握手，四次挥手？&lt;/h1&gt;&lt;p&gt;为了防止已失效的连接请求报文段突然又传送到了服务端，因而产生错误，假设这是一个早已失效的报文段。&lt;/p&gt;
+&lt;p&gt;但是服务器使用到此失效的连接请求报文段后，就误认为客户端再次发出的一个新的连接请求。于是就向客户端发出确认报文段，同意建立连接。&lt;/p&gt;
+&lt;p&gt;假设不采用三次握手，那么只要服务器发出确认，新的连接就建立了。&lt;/p&gt;
+&lt;p&gt;由于客户端没有发出建立连接的请求，因此不会理睬服务器的确认，也不会向服务器发送数据，但是服务器却以为新的运输连接已经建立，并一直等待客户端发来数据，这样服务器的很多资源就会被浪费掉。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="面试题" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>设计模式 MVC 和 MVVM</title>
+    <link href="http://yoursite.com/2022/02/23/MVC%E5%92%8CMVVM/"/>
+    <id>http://yoursite.com/2022/02/23/MVC%E5%92%8CMVVM/</id>
+    <published>2022-02-23T06:08:09.000Z</published>
+    <updated>2022-02-23T07:17:43.741Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="MVC"><a href="#MVC" class="headerlink" title="MVC"></a>MVC</h1><p>M 是数据模型 Model，负责处理数据，以及数据改变时发出通知。（Notification、KVO），Model 和 View 不能直接进行通信，这样会违背 MVC 设计模式。<br>V 是视图 View，用来展示界面，和用户进行交互，为了解耦合一般不会直接持有或者操作数据层中的数据模型（可以通过 target-action、delegate、block 等方式解耦）。<br>C 是控制器 Controller 用来调节 Model 和 View 之间的交互，可以直接与 Model 还有 View 进行通信，操作 Model 进行数据更新，刷新 View。</p><div align="center"><img src="https://gitee.com/zxhubs/source-material/raw/master/ios_mvc.jpeg"/></div><center>MVC如图所示</center><span id="more"></span>--- 优点：View、Model 低耦合、高复用、容易维护。缺点：Controller 的代码过于臃肿，如果 View 与 Model 直接交互会导致 View 和 Model 之间的耦合性增大，网络逻辑会加重 Controller 的臃肿。# MVVMMVVM 衍生于 MVC，是 MVC 的一种演进，促进了 UI 代码和业务逻辑的分离，抽取 Controller 中的展示逻辑放到 ViewModel 中。M：数据模型 Model，负责处理数据，以及数据改变时发出通知。V：是 View 和 Controller 联系到一起，视为一个组件 View。View 和 Controller 都不直接引用模型 Model，可以引用视图模型 ViewModel。ViewController 尽量不涉及业务逻辑，让 ViewModel 做这些事情。ViewController 属于中间人，负责接收 View 的事件、调用 ViewModel 的方法、响应 ViewModel 的变化。VM：ViewModel 负责封装业务逻辑、网络处理和数据缓存。使用 ViewModel 会轻微增加代码量，但是总体上减少了代码的复杂性。ViewModel 之间可以有依赖。> 注意事项：View 引用 ViewModel，但是反过来不行，因为如果 VM 跟 V 产生了耦合，不方便复用。即不要在 ViewModel 中引用 UIKit，任何视图本身的引用都不应该放在 ViewModel 中。ViewModel 可以引用 Model，但反过来不行。---优点：低耦合、可复用、数据流向清晰，而且兼容 MVC，便于代码的移植，并且 ViewModel 可以拆除来独立开发方便测试。缺点：类会增多，ViewModel 会越来越庞大，调用复杂度增加、双向绑定数据会导致问题调试变得困难。<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>MVVM 其实是 MVC 的变种。MVVM 只是帮 MVC 中的 Controller 瘦身，把一些逻辑代码和网络请求分离出去。不让 Controller 处理更多的东西，不会变得臃肿，MVVM 和 MVC 可以根据实际需求进行灵活选择。</p><p>MVVM 在使用当中，通常还会利用双向绑定技术，使得 Model 变化时，ViewModel 会自动更新，而 ViewModel 变化时，View 也会自动变化。OC中可以用 RAC 函数响应式框架来实现响应式编程。</p>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;MVC&quot;&gt;&lt;a href=&quot;#MVC&quot; class=&quot;headerlink&quot; title=&quot;MVC&quot;&gt;&lt;/a&gt;MVC&lt;/h1&gt;&lt;p&gt;M 是数据模型 Model，负责处理数据，以及数据改变时发出通知。（Notification、KVO），Model 和 View 不能直接进行通信，这样会违背 MVC 设计模式。&lt;br&gt;V 是视图 View，用来展示界面，和用户进行交互，为了解耦合一般不会直接持有或者操作数据层中的数据模型（可以通过 target-action、delegate、block 等方式解耦）。&lt;br&gt;C 是控制器 Controller 用来调节 Model 和 View 之间的交互，可以直接与 Model 还有 View 进行通信，操作 Model 进行数据更新，刷新 View。&lt;/p&gt;
+&lt;div align=&quot;center&quot;&gt;
+&lt;img src=&quot;https://gitee.com/zxhubs/source-material/raw/master/ios_mvc.jpeg&quot;/&gt;
+&lt;/div&gt;
+&lt;center&gt;MVC如图所示&lt;/center&gt;</summary>
+    
+    
+    
+    
+    <category term="学习记录" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
   
   <entry>
     <title>如何运行 GitHub 上的 iOS app</title>
