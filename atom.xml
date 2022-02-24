@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2022-02-23T07:05:51.650Z</updated>
+  <updated>2022-02-24T08:30:11.668Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>iOS设计模式</title>
+    <link href="http://yoursite.com/2022/02/24/iOS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://yoursite.com/2022/02/24/iOS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</id>
+    <published>2022-02-24T08:03:48.000Z</published>
+    <updated>2022-02-24T08:30:11.668Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="iOS-开发中一些设计模式"><a href="#iOS-开发中一些设计模式" class="headerlink" title="iOS 开发中一些设计模式"></a>iOS 开发中一些设计模式</h1><h2 id="创建型模式"><a href="#创建型模式" class="headerlink" title="创建型模式"></a>创建型模式</h2><hr><h3 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h3><p>在整个应用程序中，共享一份资源。保证在程序运行过程中，一个类只有一个实例，而且在该实例只提供一个全局访问点供外界访问，从而方便控制实例个数，节约系统资源。</p><p>优点：提供了对唯一实例的受控访问、可扩展、避免频繁创建销毁对象影响性能。</p><p>缺点：延长了生命周期，一直存在占用内存。如果两个单例循环依赖会造成死锁，所以尽量不去产生单立间的依赖关系。</p><span id="more"></span><h3 id="工厂方法模式"><a href="#工厂方法模式" class="headerlink" title="工厂方法模式"></a>工厂方法模式</h3><p>通过类继承创建抽象产品，创建一种产品，子类化创建者并重载工厂方法以创建新产品。</p><h3 id="抽象工厂模式"><a href="#抽象工厂模式" class="headerlink" title="抽象工厂模式"></a>抽象工厂模式</h3><p>通过对象组合创建抽象产品，可以创建多系列产品，必须修改父类的接口才能支持新的产品。</p><h2 id="结构型模式"><a href="#结构型模式" class="headerlink" title="结构型模式"></a>结构型模式</h2><hr><h3 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h3><p>代理用来处理事件的监听和参数传递。<code>required</code> 修饰必须实现这个协议方法，<code>optional</code> 修饰可选实现。使用方法时最好先判断方法是否实现 respondsToSelector: ，避免找不到方法而崩溃。</p><h3 id="装饰模式"><a href="#装饰模式" class="headerlink" title="装饰模式"></a>装饰模式</h3><p>在不比改变原类文件和使用继承的情况下，动态地扩展一个对象的功能。诸如：分类。</p><h3 id="享元模式"><a href="#享元模式" class="headerlink" title="享元模式"></a>享元模式</h3><p>使用共享物件，减少同一类对象大量创建。如：<code>UITableviewCell</code> 复用。</p><h2 id="行为型模式"><a href="#行为型模式" class="headerlink" title="行为型模式"></a>行为型模式</h2><h3 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h3><p>其本质上是一种发布-订阅模型，用来消除具有不同行为的对象之间的耦合，通过这一模式，不同对象可以协同工作。诸如：KVO。</p><h3 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h3><p>是一种将方法调用封装为对象的设计模式，在 iOS 中具体实现为 <code>NSInvocation</code>。</p>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;iOS-开发中一些设计模式&quot;&gt;&lt;a href=&quot;#iOS-开发中一些设计模式&quot; class=&quot;headerlink&quot; title=&quot;iOS 开发中一些设计模式&quot;&gt;&lt;/a&gt;iOS 开发中一些设计模式&lt;/h1&gt;&lt;h2 id=&quot;创建型模式&quot;&gt;&lt;a href=&quot;#创建型模式&quot; class=&quot;headerlink&quot; title=&quot;创建型模式&quot;&gt;&lt;/a&gt;创建型模式&lt;/h2&gt;&lt;hr&gt;
+&lt;h3 id=&quot;单例模式&quot;&gt;&lt;a href=&quot;#单例模式&quot; class=&quot;headerlink&quot; title=&quot;单例模式&quot;&gt;&lt;/a&gt;单例模式&lt;/h3&gt;&lt;p&gt;在整个应用程序中，共享一份资源。保证在程序运行过程中，一个类只有一个实例，而且在该实例只提供一个全局访问点供外界访问，从而方便控制实例个数，节约系统资源。&lt;/p&gt;
+&lt;p&gt;优点：提供了对唯一实例的受控访问、可扩展、避免频繁创建销毁对象影响性能。&lt;/p&gt;
+&lt;p&gt;缺点：延长了生命周期，一直存在占用内存。如果两个单例循环依赖会造成死锁，所以尽量不去产生单立间的依赖关系。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="技术" scheme="http://yoursite.com/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>iOS 面试题</title>
