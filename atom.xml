@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2022-03-10T07:41:26.540Z</updated>
+  <updated>2022-03-16T09:06:47.267Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Xcode快捷键</title>
+    <link href="http://yoursite.com/2022/03/16/Xcode%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    <id>http://yoursite.com/2022/03/16/Xcode%E5%BF%AB%E6%8D%B7%E9%94%AE/</id>
+    <published>2022-03-16T08:56:16.000Z</published>
+    <updated>2022-03-16T09:06:47.267Z</updated>
+    
+    <content type="html"><![CDATA[<p>常用的快捷键</p><p>光标左移：ctrl+b<br>光标右移：ctrl+f<br>光标上移：ctrl+p<br>光标下移：ctrl+n<br>光标移至一行最左边：ctrl+a<br>删除快捷键：ctrl+k</p><span id="more"></span><p>光标移至一行最右边：ctrl+e<br>删除一个单词：option+delete<br><strong>缩进对齐：ctrl+i</strong><br>向右边删除：ctrl+d<br>向上移动：ctrl+u<br>向下移动：ctrl+v<br>呼出搜索行数：command+l</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;常用的快捷键&lt;/p&gt;
+&lt;p&gt;光标左移：ctrl+b&lt;br&gt;光标右移：ctrl+f&lt;br&gt;光标上移：ctrl+p&lt;br&gt;光标下移：ctrl+n&lt;br&gt;光标移至一行最左边：ctrl+a&lt;br&gt;删除快捷键：ctrl+k&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="技术" scheme="http://yoursite.com/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>LLVM</title>
