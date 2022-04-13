@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2022-03-27T12:32:27.454Z</updated>
+  <updated>2022-04-13T08:35:28.863Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>iOS 技巧</title>
+    <link href="http://yoursite.com/2022/04/13/iOS%E6%8A%80%E5%B7%A7/"/>
+    <id>http://yoursite.com/2022/04/13/iOS%E6%8A%80%E5%B7%A7/</id>
+    <published>2022-04-13T08:30:05.000Z</published>
+    <updated>2022-04-13T08:35:28.863Z</updated>
+    
+    <content type="html"><![CDATA[<p>编程语言</p><ul><li><strong>swift</strong></li><li>OC</li></ul><p>UI</p><ul><li>UIKit</li><li>swiftUI</li><li>纯代码</li><li>storyboard</li><li>Xib</li></ul><span id="more"></span><p>网络请求</p><ul><li>API</li><li>HTTP</li><li>JSON</li><li>Error</li></ul><p>本地数据存储</p><ul><li>偏好设置</li><li>文件</li><li>缓存</li><li>临时文件</li></ul><p>存储方式</p><ul><li>编码成文件</li><li>数据库</li></ul><p>多线程<br>（主线程负责响应交互，耗时任务交给其他线程，网络请求等）</p><ul><li>GCD </li><li>serial queue 串行队列 &amp; concurrent queue 并发队列</li><li>sync &amp; async 同步和异步</li><li>lock 死锁</li><li>semaphore 信号量</li></ul><p>第三方库</p><ul><li>cocoapods</li></ul><p>版本控制</p><ul><li>git</li></ul><p>架构设计</p><ul><li>精简</li><li>可读性</li></ul><p>设计模式</p><ul><li>MVVM</li><li>MVC</li><li>单例</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;编程语言&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;swift&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;OC&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;UI&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;UIKit&lt;/li&gt;
+&lt;li&gt;swiftUI&lt;/li&gt;
+&lt;li&gt;纯代码&lt;/li&gt;
+&lt;li&gt;storyboard&lt;/li&gt;
+&lt;li&gt;Xib&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    
+    <category term="技巧" scheme="http://yoursite.com/tags/%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
   
   <entry>
     <title>算法笔记</title>
