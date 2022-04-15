@@ -1,0 +1,405 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="ZhangX"><title>常见命名 · ZXhome</title><meta name="description" content="函数中的动词选取各类函数命名动词总结：创建/销毁
+create 创建
+initialize 初始化（实例、属性）
+load 加载
+destroy 销毁
+uninitialize 反初始化
+
+
+获取/设置
+get 获取（通用）
+fetch 获取（网络请求）request
+calculate 计算
+re"><meta name="keywords" content="Blog,博客,Hexo"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="shortcut icon" type="image/x-icon" href="/images/favicon.webp"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="/css/insight.css"><link rel="stylesheet" href="/css/search.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><script src="/js/jquery.js"></script><meta name="generator" content="Hexo 5.4.1"></head><body><div class="page-top animated fadeInDown"><div class="nav"><li> <a href="/">首页</a></li><li> <a href="/archives">归档</a></li><li> <a href="/tags">标签</a></li><li> <a href="/about">关于</a></li></div><div class="information"><div class="nav_right_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li><li><a class="fa fa-search" onclick="openWindow();"></a></li></div><div class="avatar"><img src="/images/logo.webp"></div></div></div><div class="sidebar animated fadeInDown"><div class="sidebar-top"><div class="logo-title"><div class="title"><img src="/images/logo@2x.webp" style="width:200px;" alt="favicon"><h3 title=""><a href="/">ZXhome</a></h3><div class="description"><p>ZhangX 的博客</p></div></div><ul class="social-links"><li><a target="_blank" rel="noopener" href="https://github.com/ZXHubs"><i class="fa fa-github"></i></a></li><li><a href="mailto:zxjerry@163.com"><i class="fa fa-envelope"></i></a></li></ul></div></div><div class="footer"><div class="p"> <span> Copyright © 2022 </span><i class="fa fa-star"></i><span> ZhangX</span></div><div class="beian"></div></div></div><div class="main"><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>常见命名</a></h3></div><div class="post-content"><p><h1><span id="函数中的动词选取">函数中的动词选取</span></h1><h2><span id="各类函数命名动词总结">各类函数命名动词总结：</span></h2><p><strong>创建/销毁</strong></p>
+<p>create 创建</p>
+<p>initialize 初始化（实例、属性）</p>
+<p>load 加载</p>
+<p>destroy 销毁</p>
+<p>uninitialize 反初始化</p>
+<span id="more"></span>
+
+<p><strong>获取/设置</strong></p>
+<p>get 获取（通用）</p>
+<p>fetch 获取（网络请求）request</p>
+<p>calculate 计算</p>
+<p>read 读取（文件/配置）</p>
+<p>query 查询</p>
+<p>find/search 查找（数据库、集合）</p>
+<p>receive 接受</p>
+<p>pull 拉取</p>
+<p>set 通用设置（属性）</p>
+<p>write 写入（文件/配置）</p>
+<p>put 放入</p>
+<p>push 推送、存入</p>
+<p><strong>更新</strong></p>
+<p>reset 重置（标记、状态）</p>
+<p>refresh 刷新（页面、缓存）</p>
+<p>update 更新（配置、状态）</p>
+<p><strong>添加/移除</strong></p>
+<p>add 通用添加</p>
+<p>append 追加</p>
+<p>insert 插入</p>
+<p>delete 删除</p>
+<p>remove 移除</p>
+<p><strong>启动/停止</strong></p>
+<p>open 开启</p>
+<p>start 开始</p>
+<p>launch 发动、启动</p>
+<p>close 关闭</p>
+<p>stop 停止</p>
+<p>finish 完成</p>
+<br>
+
+<h1><span id="选取原则1-避免滥用通用单词">选取原则1 避免滥用通用单词</span></h1><h2><span id="案例1万能的get">案例1：万能的Get</span></h2><h2><span id="gettotalamount">GetTotalAmount();</span></h2><h3><span id="获取属性">获取属性?</span></h3><h3><span id="获取本地存储内容">获取本地存储内容?</span></h3><h3><span id="获取网络内容">获取网络内容?</span></h3><h3><span id="获取数据库内容">获取数据库内容?</span></h3><h3><span id="获取计算后的内容">获取计算后的内容?</span></h3><h3><span id>……</span></h3><br>
+
+<h2><span id="案例2万能的add">案例2：万能的Add</span></h2><h2><span id="addcharacter">AddCharacter();</span></h2><h3><span id="添加到头部">添加到头部?</span></h3><h3><span id="添加到尾部">添加到尾部?</span></h3><h3><span id="从中间插入字符">从中间插入字符?</span></h3><h2><span id>……</span></h2><br>
+
+<h2><span id="问题">问题：</span></h2><h3><span id="通用单词可以在很多场景下命名但不能区分具体函数职责">通用单词可以在很多场景下命名，但不能区分具体函数职责。</span></h3><h3><span id="当函数本身的实现途径不同时难以从函数名得到足够的信息">当函数本身的实现途径不同时，难以从函数名得到足够的信息。</span></h3><br>
+
+<h1><span id="函数命名动词大全指南">函数命名动词大全指南：</span></h1><h2><span id="创建销毁">创建/销毁</span></h2><table class="table table-bordered table-striped table-condensed">
+   <tr>
+      <th>动词</th>
+      <th>用途</th>
+      <th>示例</th>
+   </tr>
+   <tr>
+      <td>Create</td>
+      <td>创建实例，常用于实例化方法和工厂方法的命名</td>
+      <td>CreateInstance</td>
+   </tr>
+   <tr>
+      <td>Initialize</td>
+      <td>初始化实例的属性和设置，Initialize本身也可作为类方法用来初始化</td>
+      <td>InitializeInstance,Initialize</td>
+   </tr>
+   <tr>
+      <td>Load</td>
+      <td>加载配置，根据配置创建内容</td>
+      <td>LoadFromConfig</td>
+   </tr>
+   <tr>
+      <td>Destroy</td>
+      <td>销毁实例，常用语析构方法</td>
+      <td>DestroyInstance</td>
+   </tr>
+   <tr>
+      <td>Uninitialize</td>
+      <td>清理实例的属性和设置，通常和Initialize对应</td>
+      <td>UninitializeInstance,Uninitialize</td>
+   </tr>
+</table>
+<br>
+
+<h2><span id="获取设置">获取/设置</span></h2><table class="table table-bordered table-striped table-condensed">
+   <tr>
+      <th>动词</th>
+      <th>用途</th>
+      <th>示例</th>
+   </tr>
+   <tr>
+      <td>Get</td>
+      <td>常用于取属性的类方法命名，也可作为通用获取方法命名</td>
+      <td>GetStartTime</td>
+   </tr>
+   <tr>
+      <td>Fetch</td>
+      <td>通过网络请求获取内容</td>
+      <td>FetchAllUsers</td>
+   </tr>
+   <tr>
+      <td>Calculate</td>
+      <td>通过计算获取内容</td>
+      <td>CalculateTotalAmount</td>
+   </tr>
+   <tr>
+      <td>Read</td>
+      <td>读取(多用于文件，配置等)</td>
+      <td>ReadFile,ReadConfig</td>
+   </tr>
+   <tr>
+      <td>Query</td>
+      <td>查询</td>
+      <td>QueryRemainingAmount</td>
+   </tr>
+   <tr>
+      <td>Find</td>
+      <td>查找(多用于数据库，集合等),和search相似</td>
+      <td>FindOrder</td>
+   </tr><tr>
+      <td>Receive</td>
+      <td>接收(多用于文件，消息等)</td>
+      <td>ReceiveNewMessage</td>
+   </tr>
+   <tr>
+      <td>Pull</td>
+      <td>拉取</td>
+      <td>PullLastestSourceCode</td>
+   </tr>
+      <tr>
+      <td>Set</td>
+      <td>常用于设置属性的类方法命名，也可作为通用设置方法命名</td>
+      <td>SetStartTime</td>
+   </tr>
+   <tr>
+      <td>Write</td>
+      <td>写入(文件/配置等)</td>
+      <td>WriteFile,WriteConfig</td>
+   </tr>
+   <tr>
+      <td>Put</td>
+      <td>放入</td>
+      <td>PutUserWithId</td>
+   </tr>
+   <tr>
+      <td>Push</td>
+      <td>存入,推送(通知)</td>
+      <td>PushNotification</td>
+   </tr>
+</table>
+<br>
+
+<h2><span id="更新">更新</span></h2><table class="table table-bordered table-striped table-condensed">
+   <tr>
+      <th>动词</th>
+      <th>用途</th>
+      <th>示例</th>
+   </tr>
+   <tr>
+      <td>Reset</td>
+      <td>强调重置(标记,状态)</td>
+      <td>ResetTimer</td>
+   </tr>
+   <tr>
+      <td>Refresh</td>
+      <td>用于命名刷新(多用于页面,缓存等)</td>
+      <td>RefreshCurrentPage</td>
+   </tr>
+   <tr>
+      <td>Update</td>
+      <td>更新(多用于配置，状态等)</td>
+      <td>UpdateUserSetting</td>
+   </tr>
+</table>
+<br>
+
+<h2><span id="添加移除">添加/移除</span></h2><table class="table table-bordered table-striped table-condensed">
+   <tr>
+      <th>动词</th>
+      <th>用途</th>
+      <th>示例</th>
+   </tr>
+   <tr>
+      <td>Add</td>
+      <td>用于通用添加方法命名</td>
+      <td>AddNewStudent</td>
+   </tr>
+   <tr>
+      <td>Append</td>
+      <td>强调在尾部添加(追加)</td>
+      <td>AppendCharacter</td>
+   </tr>
+   <tr>
+      <td>Insert</td>
+      <td>强调插入(可以在任意位置)</td>
+      <td>InsertCharacter</td>
+   </tr>
+   <tr>
+      <td>Delete</td>
+      <td>表示删除,和Remove相近</td>
+      <td>DeleteDirectory</td>
+   </tr>
+   <tr>
+      <td>Remove</td>
+      <td>表示移除,和Delete相近</td>
+      <td>RemoveInvalidDeals</td>
+   </tr>
+</table>
+<br>
+
+<h2><span id="启动停止">启动/停止</span></h2><table class="table table-bordered table-striped table-condensed">
+   <tr>
+      <th>动词</th>
+      <th>用途</th>
+      <th>示例</th>
+   </tr>
+   <tr>
+      <td>Open</td>
+      <td>开启(多用于开启状态,打开文件等)</td>
+      <td>OpenEnhanceMode</td>
+   </tr>
+   <tr>
+      <td>Start</td>
+      <td>开始(强调开始某个流程)</td>
+      <td>StartPortListening</td>
+   </tr>
+   <tr>
+      <td>Launch</td>
+      <td>发动/启动(多用于启动程序,服务)</td>
+      <td>LaunchAssistService</td>
+   </tr>
+   <tr>
+      <td>Close</td>
+      <td>关闭(多用于关闭状态,关闭文件等)</td>
+      <td>CloseEnhanceMode</td>
+   </tr>
+   <tr>
+      <td>Stop</td>
+      <td>停止(强调流程的终止)</td>
+      <td>StopPortListening</td>
+   </tr>
+   <tr>
+      <td>Pause</td>
+      <td>暂停(强调流程的暂停，有可能后续会继续开启)</td>
+      <td>PausePageLoading</td>
+   </tr>
+   <tr>
+      <td>Finish</td>
+      <td>完成(强调流程的完成)</td>
+      <td>FinishRequesting</td>
+   </tr>
+</table>
+<br>
+
+<h2><span id="集合类型相关数据处理">集合类型相关数据处理</span></h2><table class="table table-bordered table-striped table-condensed">
+   <tr>
+      <th>动词</th>
+      <th>用途</th>
+      <th>示例</th>
+   </tr>
+   <tr>
+      <td>Filter</td>
+      <td>过滤,筛选(强调按照某些条件)</td>
+      <td>FilterByName</td>
+   </tr>
+   <tr>
+      <td>Merge</td>
+      <td>合并(有时会带上合并规则)</td>
+      <td>MergeTwoConfig</td>
+   </tr>
+   <tr>
+      <td>Concat</td>
+      <td>拼接(直接在结尾添加)</td>
+      <td>ConcatToArray</td>
+   </tr>
+   <tr>
+      <td>Split</td>
+      <td>分割</td>
+      <td>SplitInput</td>
+   </tr>
+   <tr>
+      <td>Deduplicate</td>
+      <td>去重(去重完全相同的项)</td>
+      <td>DeduplicateList</td>
+   </tr>
+   <tr>
+      <td>Reverse</td>
+      <td>颠倒,反向排列</td>
+      <td>ReverseRecord</td>
+   </tr>
+   <tr>
+      <td>Sort</td>
+      <td>排序(有时会带上排序规则)</td>
+      <td>SortDealsByAmount</td>
+   </tr>
+   <tr>
+      <td>Fill</td>
+      <td>填充(一般会进行覆盖)</td>
+      <td>FillAmountList</td>
+   </tr>
+</table>
+<br>
+
+<h2><span id="通用业务数据处理">通用业务数据处理</span></h2><table class="table table-bordered table-striped table-condensed">
+   <tr>
+      <th>动词</th>
+      <th>用途</th>
+      <th>示例</th>
+   </tr>
+   <tr>
+      <td>Parse</td>
+      <td>解析(解析成某些格式,解析提取某些内容)</td>
+      <td>ParseFromJson,ParseResult</td>
+   </tr>
+   <tr>
+      <td>Analyse</td>
+      <td>分析(不一定能通过简单的方式获取)</td>
+      <td>AnalyseLocation</td>
+   </tr>
+   <tr>
+      <td>Convert</td>
+      <td>类型转换(通常用于从一个类型转换到另一种类型)</td>
+      <td>ConvertToString</td>
+   </tr>
+   <tr>
+      <td>Format</td>
+      <td>格式化数据</td>
+      <td>FormatToLocaleString</td>
+   </tr>
+   <tr>
+      <td>Validate</td>
+      <td>合法性/有效性的校验</td>
+      <td>ValidateUserInputs</td>
+   </tr>
+   <tr>
+      <td>Ensure</td>
+      <td>期待值的校验</td>
+      <td>EnsureUserAge</td>
+   </tr>
+   <tr>
+      <td>Compose</td>
+      <td>组成(一般由多项内容组成一个结果)</td>
+      <td>ComposeMessage</td>
+   </tr>
+   <tr>
+      <td>Encode</td>
+      <td>编码(依赖约定的编码格式)</td>
+      <td>EncodeUrl</td>
+   </tr>
+   <tr>
+      <td>Decode</td>
+      <td>解码(依赖约定的解码格式)</td>
+      <td>DecodeUrl</td>
+   </tr>
+   <tr>
+      <td>Encrypt</td>
+      <td>数据加密(依赖约定的加密算法)</td>
+      <td>EncryptContent</td>
+   </tr>
+   <tr>
+      <td>Decrypt</td>
+      <td>数据解密(依赖约定的解密算法)</td>
+      <td>DecryptContent</td>
+   </tr>
+   <tr>
+      <td>Backup</td>
+      <td>备份(需要注意拷贝方式，避免误导)</td>
+      <td>BackupUserSettings</td>
+   </tr>
+   <tr>
+      <td>Restore</td>
+      <td>恢复</td>
+      <td>RestoreUserSettings</td>
+   </tr>
+   <tr>
+      <td>Import</td>
+      <td>导入(通常用于按照特定格式的文件转换)</td>
+      <td>ImportFromFile</td>
+   </tr>
+   <tr>
+      <td>Export</td>
+      <td>导出(通常用于转换成特定格式的文件)</td>
+      <td>ExportToFile</td>
+   </tr>
+      <tr>
+      <td>Compress</td>
+      <td>压缩(依赖约定的算法)</td>
+      <td>CompressOversizedFile</td>
+   </tr>
+   <tr>
+      <td>Decompress</td>
+      <td>解压缩(依赖约定的算法)</td>
+      <td>DecompressOversizedFile</td>
+   </tr>
+</table>
+<br>
+</p><div class="tip">保留所有权利<br>作者: ZhangX</div></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2022-04-15</span><i class="fa fa-tag"></i><a class="tag" href="/tags/技巧/" title="技巧">技巧 </a><span class="leancloud_visitors"></span><span>大约1212个字, 4分钟2秒读完</span></div></div></div></div><div class="pagination"><ul class="clearfix"><li class="next pagbuttons"><a class="btn" role="navigation" href="/2022/04/13/iOS%E6%8A%80%E5%B7%A7/" title="iOS 技巧">下一篇</a></li></ul></div><script src="/js/visitors.js"></script></div></div></div></div><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/add-bookmark.js"></script><script>(function(window){var INSIGHT_CONFIG={TRANSLATION:{POSTS:"文章",PAGES:"页面",CATEGORIES:"分类",TAGS:"标签",UNTITLED:"(无标题)",},CONTENT_URL:"/content.json",};window.INSIGHT_CONFIG=INSIGHT_CONFIG})(window);</script><script src="/js/insight.js" defer></script><div class="searchbox ins-search"><div class="searchbox-container ins-search-container"><div class="searchbox-input-wrapper"><input class="searchbox-input ins-search-input" type="text" placeholder="想要查找什么..."><span class="searchbox-close"><a class="fa fa-times-circle" onclick="closeWindow();"></a></span></div><div class="searchbox-result-wrapper ins-section-wrapper"><div class="ins-section-container"><p>Seraching...</p></div></div></div></div></body></html>
